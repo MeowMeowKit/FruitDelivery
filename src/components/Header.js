@@ -63,20 +63,20 @@ const Header = () => {
                   className="flex items-center gap-8"
                >
                   <Link to={"/"}>
-                     <li className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                         Home
                      </li>
                   </Link>
                   <Link to={"/menuItems"}>
-                     <li className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                         Menu
                      </li>
                   </Link>
 
-                  <li className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                  <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                      About Us
                   </li>
-                  <li className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                  <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                      Service
                   </li>
                </motion.ul>
