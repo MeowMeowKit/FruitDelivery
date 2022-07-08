@@ -3,7 +3,13 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { CreateContainer, Header, MainContainer } from "./components";
+import {
+   CreateContainer,
+   FooterContainer,
+   Header,
+   MainContainer,
+   MenuContainer,
+} from "./components";
 import { useStateValue } from "./context/StateProvider";
 import { getAllItemsFood } from "./utils/firebaseFunction";
 import { actionType } from "./context/reducer";
@@ -31,8 +37,10 @@ function App() {
                <Routes>
                   <Route path="/*" element={<MainContainer />} />
                   <Route path="/createItem" element={<CreateContainer />} />
+                  <Route path="/menuItems" element={<MenuContainer />} />
                </Routes>
             </main>
+            {/* <FooterContainer /> */}
          </div>
       </AnimatePresence>
    );

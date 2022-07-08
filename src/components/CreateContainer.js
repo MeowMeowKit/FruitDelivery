@@ -86,7 +86,7 @@ const CreateContainer = () => {
          }, 4000);
       });
    };
-   const saveData = () => {
+   const saveDatas = () => {
       setIsLoading(true);
       try {
          if (!title || !calories || !imageAsset || !price || !category) {
@@ -135,7 +135,7 @@ const CreateContainer = () => {
       setImageAsset(null);
       setCalories("");
       setPrice("");
-      setCalories("Select Category");
+      setCategory("Select Category");
    };
 
    const fetchData = async () => {
@@ -148,9 +148,9 @@ const CreateContainer = () => {
    };
 
    return (
-      <div className="w-full min-h-screen flex items-center justify-center">
-         <div className="w-[90%] md:w-[75%] border border-pink-300 rounded-lg p-4 flex flex-col items-center justify-center gap-4">
-            <h1 className="flex items-center justify-center font-semibold text-headingColor text-3xl">
+      <div className="w-full min-h-screen flex items-center justify-center -mt-10">
+         <div className="w-[90%] md:w-[75%] border border-pink-300 rounded-lg p-4 flex flex-col items-center justify-center gap-2">
+            <h1 className="flex items-center justify-center font-semibold text-pink-600 text-3xl">
                CREATE NEW ITEM
             </h1>
             {fields && (
@@ -199,7 +199,7 @@ const CreateContainer = () => {
                      ))}
                </select>
             </div>
-            <div className="group flex flex-col items-center justify-center border-2 border-dotted border-gray-300 w-full h-225 md:h-420 cursor-pointer rounded-lg">
+            <div className="group flex flex-col items-center justify-center border-2 border-dotted border-gray-300 w-full h-225 md:h-300 cursor-pointer rounded-lg">
                {isLoading ? (
                   <Loader />
                ) : (
@@ -209,7 +209,7 @@ const CreateContainer = () => {
                            <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
                               <div className="w-full h-full flex flex-col items-center justify-center gap-2 ">
                                  <MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
-                                 <p>Click here to upload new item</p>
+                                 <p>Click here to upload new image item</p>
                                  <input
                                     type="file"
                                     name="uploadimage"
@@ -270,7 +270,7 @@ const CreateContainer = () => {
             <div className="flex items-center justify-center w-full">
                <button
                   className="w-[20%] md:auto border-none outline-none bg-emerald-500 px-12 py-2 rouned-lg text-lg text-white font-semibold flex items-center justify-center"
-                  onClick={saveData}
+                  onClick={saveDatas}
                >
                   Save
                </button>

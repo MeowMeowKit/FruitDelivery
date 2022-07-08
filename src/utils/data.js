@@ -1,47 +1,45 @@
-import Pomegranates from "../assets/images/f1.png";
-import I1 from "../assets/images/i1.png";
-import C3 from "../assets/images/c3.png";
-import Fi1 from "../assets/images/fi1.png";
+import Strawberries from "../assets/images/f1.png";
+import I1 from "../assets/images/Coconut.png";
+import orange from "../assets/images/orange.png";
+import smoothie from "../assets/images/smoothie3.png";
 
 const heroData = [
    {
       id: 1,
       name: "Icecream",
-      decp: "Chocolate & vanilla",
-      price: "5.25",
+      decp: "Coconut Icecream",
+      price: "2.5",
       imageSrc: I1,
    },
    {
       id: 2,
-      name: "Strawberries",
+      name: "Fruits",
       decp: "Fresh Strawberries",
-      price: "3.99",
-      imageSrc: Pomegranates,
+      price: "3.0",
+      imageSrc: Strawberries,
    },
    {
       id: 3,
-      name: "Fruit Kebab",
-      decp: "abc asd sadjsa dajs",
-      price: "7.99",
-      imageSrc: C3,
+      name: "Orange",
+      decp: "Orange Juice",
+      price: "2.5",
+      imageSrc: orange,
    },
    {
       id: 4,
-      name: "Food Kebab",
-      decp: "kim loan an cut heo",
-      price: "4.99",
-      imageSrc: Fi1,
+      name: "Smoothie",
+      decp: "Smoothie Strawberries",
+      price: "3.0",
+      imageSrc: smoothie,
    },
 ];
 
 const categories = [
-   { id: 1, name: "Chicken", urlParamName: "chicken" },
-   { id: 2, name: "Curry", urlParamName: "curry" },
-   { id: 3, name: "Rice", urlParamName: "rice" },
-   { id: 4, name: "Fish", urlParamName: "fish" },
-   { id: 5, name: "Fruits", urlParamName: "fruits" },
-   { id: 6, name: "Icecream", urlParamName: "icecream" },
-   { id: 7, name: "Soft Drinks", urlParamName: "drinks" },
+   { id: 1, name: "Fruits", urlParamName: "fruits" },
+   { id: 2, name: "Smoothie", urlParamName: "smoothie" },
+   { id: 3, name: "Jam", urlParamName: "jam" },
+   { id: 4, name: "Juice", urlParamName: "juice" },
+   { id: 5, name: "Icecream", urlParamName: "icecream" },
 ];
 
 export { heroData, categories };

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Delivery from "../assets/images/delivery2.png";
-import HeroBg from "../assets/images/bg6.jpg";
+import HeroBg from "../assets/images/heroBg.png";
 import { heroData } from "../utils/data";
 
 const HomeContainer = () => {
@@ -32,10 +32,10 @@ const HomeContainer = () => {
             </p>
 
             <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-               doloremque dolores ad. Laboriosam enim sed perspiciatis? Alias at
-               quibusdam aliquam nulla numquam, earum rerum. Ipsa beatae
-               reprehenderit totam fugit facilis.
+               Help you have snacks or desserts with fresh fruit, accompanied by
+               delicious and healthy drinks. You just need to sit at home,
+               choose the dishes you like, pay and we will take care of the
+               rest. We will provide the best for you, trust them. All the best!
             </p>
 
             <button
@@ -52,16 +52,16 @@ const HomeContainer = () => {
                alt="hero-bg"
                className="ml-auto h-400 w-full lg:w-[95%] lg:h-640 rounded-xl"
             />
-            <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center lg:px-32 py-4 gap-2 flex-wrap">
+            <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center lg:px-32 py-4 gap-4 flex-wrap">
                {heroData &&
                   heroData.map((item) => (
                      <div
-                        className="lg:w-190 p-4 bg-cartOverlay backdrop-blur-md rounded-3xl flex flex-col items-center justify-center drop-shadow-lg"
+                        className="w-190 p-4 h-215 bg-cartOverlay backdrop-blur-md rounded-3xl flex flex-col items-center justify-center drop-shadow-lg"
                         key={item.id}
                      >
                         <img
                            src={item.imageSrc}
-                           className="w-26 lg:w-40 -mt-10 lg:-mt-20"
+                           className="w-full h-full object-contain -mt-10 lg:-mt-20"
                            alt={item.name}
                         />
                         <p className="text-base lg:text-xl font-semibold text-textColor mt-2 lg:mt-4">
@@ -72,10 +72,10 @@ const HomeContainer = () => {
                            {item.decp}
                         </p>
 
-                        <p className="text-sm text-red-600 font-semibold">
+                        {/* <p className="text-sm text-red-600 font-semibold">
                            <span className="text-xs text-red-600">$ </span>
                            {item.price}
-                        </p>
+                        </p> */}
                      </div>
                   ))}
             </div>
