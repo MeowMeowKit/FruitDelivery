@@ -40,7 +40,7 @@ function App() {
                   <Route path="/menuItems" element={<MenuContainer />} />
                </Routes>
             </main>
-            {/* <FooterContainer /> */}
+            <FooterContainer />
          </div>
       </AnimatePresence>
    );
