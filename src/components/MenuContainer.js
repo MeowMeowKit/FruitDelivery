@@ -10,16 +10,15 @@ import CartContainer from "./CartContainer";
 const MenuContainer = () => {
    const [filter, setFilter] = useState("fruits");
 
-   const [{ foodItems, showCart }, dispatch] = useStateValue();
+   const [{ foodItems, showCart }] = useStateValue();
    const [scrollValue, setScrollValue] = useState(0);
    useEffect(() => {}, [scrollValue, showCart]);
 
    useEffect(() => {}, [filter]);
-
    return (
       <section className="w-full my-4" id="menu">
          <div className="w-full flex item-center justify-between">
-            <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounfed-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-pink-400 to-pink-600 transition-all ease-in-out duration-100">
+            <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-pink-400 to-pink-600 transition-all ease-in-out duration-100">
                Our Fresh and Healthy fruits
             </p>
             <div className="hidden sm:flex gap-3 items-center">
@@ -33,7 +32,7 @@ const MenuContainer = () => {
                <motion.div
                   whileTap={{ scale: 0.75 }}
                   className="w-8 h-8 rounded-lg bg-pink-300 hover:bg-pink-500 flex transition-all duration-100 cursor-pointer ease-in-out hover:shadow-lg items-center justify-center"
-                  onClick={() => setScrollValue(scrollValue + 200)}
+                  onClick={() => setScrollValue(200)}
                >
                   <MdChevronRight className="text-lg text-white" />
                </motion.div>
@@ -45,10 +44,10 @@ const MenuContainer = () => {
             data={foodItems?.filter((items) => items.category === "fruits")}
          />
          <div className="w-full flex flex-col items-center justify-content">
-            <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounfed-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-pink-400 to-pink-600 transition-all ease-in-out duration-100 mr-auto">
+            <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-pink-400 to-pink-600 transition-all ease-in-out duration-100 mr-auto">
                Our Hot Dishes
             </p>
-            <div className="w-full flex items-center justify-start lg:justify-center gap-8 mt-6 overflow-x-scroll scrollbar-none">
+            <div className="w-full flex items-center justify-center lg:justify-center gap-8 mt-6 overflow-x-scroll scrollbar-none">
                {categories &&
                   categories.map((category) => (
                      <motion.div
@@ -97,7 +96,6 @@ const MenuContainer = () => {
                />
             </div>
          </div>
-         {showCart && <CartContainer />}
       </section>
    );
 };

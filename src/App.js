@@ -4,10 +4,13 @@ import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import {
+   AboutContainer,
+   CartContainer,
+   FeedbackComponent,
    CreateContainer,
    FooterContainer,
    Header,
-   MainContainer,
+   HomeContainer,
    MenuContainer,
 } from "./components";
 import { useStateValue } from "./context/StateProvider";
@@ -15,7 +18,7 @@ import { getAllItemsFood } from "./utils/firebaseFunction";
 import { actionType } from "./context/reducer";
 
 function App() {
-   const [{ foodItems }, dispatch] = useStateValue();
+   const [{ foodItems, showCart }, dispatch] = useStateValue();
 
    const fetchData = async () => {
       await getAllItemsFood().then((data) => {
@@ -25,7 +28,7 @@ function App() {
          });
       });
    };
-
+   useEffect(() => {}, [showCart]);
    useEffect(() => {
       fetchData();
    }, []);
@@ -35,12 +38,15 @@ function App() {
             <Header />
             <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">
                <Routes>
-                  <Route path="/*" element={<MainContainer />} />
+                  <Route path="/*" element={<HomeContainer />} />
                   <Route path="/createItem" element={<CreateContainer />} />
                   <Route path="/menuItems" element={<MenuContainer />} />
+                  <Route path="/aboutus" element={<AboutContainer />} />
+                  <Route path="/contact" element={<FeedbackComponent />} />
                </Routes>
             </main>
             <FooterContainer />
+            {showCart && <CartContainer />}
          </div>
       </AnimatePresence>
    );

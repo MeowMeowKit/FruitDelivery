@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BiRefresh, BiMinus, BiPlus } from "react-icons/bi";
 import { HiArrowRight } from "react-icons/hi";
+import { GrClose } from "react-icons/gr";
 import { motion } from "framer-motion";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
@@ -68,11 +69,11 @@ const CartContainer = () => {
             </motion.p>
             <p className="text-textColor text-lg font-semibold">Cart</p>
             <motion.div whileTap={{ scale: 0.75 }} onClick={toggleCart}>
-               <HiArrowRight className="text-textColor text-3xl" />
+               <GrClose className="text-textColor text-2xl" />
             </motion.div>
          </div>
          {cart && cart.length > 0 ? (
-            <div className="w-full h-full bg-cartBg rounded-3xl flex flex-col">
+            <div className="w-full h-full bg-gradient-to-br from-gray-500 to-cyan-500 rounded-3xl flex flex-col">
                <div className="w-full h-340 md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll scrollbar-none">
                   {/* cart item */}
                   {cart &&

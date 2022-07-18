@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import NotFound from "../assets/images/NotFound.svg";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
-import MenuContainer from "./MenuContainer";
 
 const RowContent = ({ scrollValue, flag, data }) => {
    // console.log(data);

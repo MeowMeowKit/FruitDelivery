@@ -55,30 +55,33 @@ const Header = () => {
                   CUONG's STORE
                </p>
             </Link>
-            <div className="flex items-center justify-center gap-8">
+            <div className="flex items-center justify-center gap-8 ">
                <motion.ul
                   initial={{ opacity: 0, x: 200 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 200 }}
-                  className="flex items-center gap-8"
+                  className="flex items-center gap-8 snip1217"
                >
                   <Link to={"/"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold current">
                         Home
                      </li>
                   </Link>
                   <Link to={"/menuItems"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
                         Menu
                      </li>
                   </Link>
-
-                  <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                     About Us
-                  </li>
-                  <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                     Service
-                  </li>
+                  <Link to={"/aboutus"}>
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
+                        About Us
+                     </li>
+                  </Link>
+                  <Link to={"/contact"}>
+                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
+                        Service
+                     </li>
+                  </Link>
                </motion.ul>
                <div
                   className="relative flex items-center justify-center"
@@ -180,12 +183,14 @@ const Header = () => {
                      )}
 
                      <ul className="flex flex-col">
-                        <li
-                           className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                           onClick={() => setIsMenu(false)}
-                        >
-                           Home
-                        </li>
+                        <Link to={"/home"}>
+                           <li
+                              className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                              onClick={() => setIsMenu(false)}
+                           >
+                              Home
+                           </li>
+                        </Link>
                         <Link
                            to={"/menuItems"}
                            className="text-base text-textColor
@@ -197,18 +202,25 @@ const Header = () => {
                            {" "}
                            Menu
                         </Link>
-                        <li
-                           className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                        <Link to={"/aboutus"}>
+                           <li
+                              className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                              onClick={() => setIsMenu(false)}
+                           >
+                              About Us
+                           </li>
+                        </Link>
+                        <Link
+                           to={"/contact"}
+                           className="text-base text-textColor
+                           hover:text-headingColor duration-100 transition-all
+                           ease-in-out cursor-pointer hover:bg-slate-100 px-4
+                           py-2"
                            onClick={() => setIsMenu(false)}
                         >
-                           About Us
-                        </li>
-                        <li
-                           className="text-base text-textColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                           onClick={() => setIsMenu(false)}
-                        >
+                           {" "}
                            Service
-                        </li>
+                        </Link>
                      </ul>
 
                      <p

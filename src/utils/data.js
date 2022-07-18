@@ -3,7 +3,7 @@ import I1 from "../assets/images/Coconut.png";
 import orange from "../assets/images/orange.png";
 import smoothie from "../assets/images/smoothie3.png";
 
-const heroData = [
+const bgData = [
    {
       id: 1,
       name: "Icecream",
@@ -20,7 +20,7 @@ const heroData = [
    },
    {
       id: 3,
-      name: "Orange",
+      name: "Juice",
       decp: "Orange Juice",
       price: "2.5",
       imageSrc: orange,
@@ -42,4 +42,4 @@ const categories = [
    { id: 5, name: "Icecream", urlParamName: "icecream" },
 ];
 
-export { heroData, categories };
+export { bgData, categories };

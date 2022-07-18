@@ -38,6 +38,9 @@ const FooterContainer = () => {
                      <p className="capitalize py-1">
                         Put your trust in us, we will bring you the best.
                      </p>
+                     <p className="capitalize py-1">
+                        Your health is most important to us.
+                     </p>
                      <BiDonateHeart className="text-3xl mt-2" />
                   </div>
                </div>
@@ -108,13 +111,17 @@ const FooterContainer = () => {
                      Chi Minh City
                   </div>
                   <motion.div
-                     whileTap={{ scale: 0.4 }}
+                     whileTap={{ scale: 0.9 }}
                      className="flex items-center gap-1 cursor-pointer"
                   >
-                     <AiFillPhone /> +84 987 654 321
+                     <AiFillPhone /> (+84) 987 654 321
                   </motion.div>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                     <GiRotaryPhone />
+                     (+84) 123 456 789
+                  </div>
                   <motion.div
-                     whileTap={{ scale: 0.4 }}
+                     whileTap={{ scale: 0.9 }}
                      className="flex items-center gap-1 cursor-pointer"
                   >
                      <AiFillMail />
@@ -153,14 +160,14 @@ const FooterContainer = () => {
                      Chi Minh City
                   </div>
                   <motion.div
-                     whileTap={{ scale: 0.4 }}
+                     whileTap={{ scale: 0.9 }}
                      className="flex text-sm items-center gap-1 cursor-pointer"
                   >
                      <AiFillPhone /> +84 987 654 321
                   </motion.div>
                   <motion.div
-                     whileTap={{ scale: 0.4 }}
-                     className="flex text-sm items-center gap-1 cursor-pointer"
+                     whileTap={{ scale: 0.9 }}
+                     className="flex text-sm items-center gap-1 cursor-pointer mt-1"
                   >
                      <GiRotaryPhone />
                      +84 123 456 789
@@ -169,31 +176,31 @@ const FooterContainer = () => {
             </div>
             <div className="flex items-center justify-center md:hidden gap-3 mt-2">
                <motion.div
-                  whileTap={{ scale: 0.4 }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex items-center gap-1 cursor-pointer"
                >
                   <AiFillFacebook />
                </motion.div>
                <motion.div
-                  whileTap={{ scale: 0.4 }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex items-center gap-1 cursor-pointer"
                >
                   <AiFillInstagram />
                </motion.div>
                <motion.div
-                  whileTap={{ scale: 0.4 }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex items-center gap-1 cursor-pointer"
                >
                   <AiFillTwitterSquare />
                </motion.div>
                <motion.div
-                  whileTap={{ scale: 0.4 }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex items-center gap-1 cursor-pointer"
                >
                   <AiFillLinkedin />
                </motion.div>
                <motion.div
-                  whileTap={{ scale: 0.4 }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex items-center gap-1 cursor-pointer"
                >
                   <AiFillMail />
