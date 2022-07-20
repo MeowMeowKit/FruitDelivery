@@ -47,11 +47,14 @@ const Header = () => {
 
    return (
       <header className="fixed z-50 w-screen bg-teal-400 p-3 px-8 md:p-6 md:px-16">
-         {/* destop & tablet */}
+         {/* laptop */}
          <div className="hidden md:flex w-full h-full items-center justify-between">
             <Link to={"/"} className="flex items-center gap-2">
                <img src={Logo} className="w-16 object-cover" alt="logo" />
-               <p className="text-headingColor text-xl font-bold">
+               <p
+                  className="text-headingColor text-xl font-bold"
+                  onClick={() => setIsMenu(false)}
+               >
                   CUONG's STORE
                </p>
             </Link>
@@ -63,22 +66,34 @@ const Header = () => {
                   className="flex items-center gap-8 snip1217"
                >
                   <Link to={"/"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold current">
+                     <li
+                        className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold current"
+                        onClick={() => setIsMenu(false)}
+                     >
                         Home
                      </li>
                   </Link>
                   <Link to={"/menuItems"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
+                     <li
+                        className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold"
+                        onClick={() => setIsMenu(false)}
+                     >
                         Menu
                      </li>
                   </Link>
                   <Link to={"/aboutus"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
+                     <li
+                        className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold"
+                        onClick={() => setIsMenu(false)}
+                     >
                         About Us
                      </li>
                   </Link>
                   <Link to={"/contact"}>
-                     <li className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold">
+                     <li
+                        className="text-base text-headingColor  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer font-semibold"
+                        onClick={() => setIsMenu(false)}
+                     >
                         Service
                      </li>
                   </Link>
